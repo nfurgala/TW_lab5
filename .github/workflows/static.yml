@@ -31,15 +31,15 @@ jobs:
 steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - [cite_start]name: Setup Node
+      - name: Setup Node
         uses: actions/setup-node@v4
-      - [cite_start]name: Install and Build
+      - name: Install and Build
         run: |
           npm install
           npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
-      - [cite_start]name: Upload artifact
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'dist'
