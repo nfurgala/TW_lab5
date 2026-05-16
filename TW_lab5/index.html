@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tw-lab5</title>
+  </head>
+  <body class="flex flex-col items-center justify-center min-h-screen">
+
+    <h1 class="text-2xl font-bold text-primary mb-6">Kalkulator Urodzin</h1>
+
+    <form id="birthdayForm" class="flex flex-col gap-4 items-center">
+        <input type="date" id="bdayInput" />
+        
+        <button type="submit" class="bg-blue-300 p-4 rounded">Sprawdź</button>
+    </form>
+
+    <dialog id="resultDialog" class="bg-gray-200 text-red-600 p-8">
+        <button id="closeBtn" class="absolute top-2 right-4 text-xl font-bold">x</button>
+        <div id="dialogContent" class="text-center"></div>
+    </dialog>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
