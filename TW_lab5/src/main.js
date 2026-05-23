@@ -27,13 +27,14 @@ form.addEventListener('submit', (e) => {
 
 
     if (isToday) {
+        // Jeśli urodziny są dzisiaj
         message += `<p class="font-bold text-lg text-green-600">Wszystkiego najlepszego!</p>`;
+    } else if (weeksLeft === 0) {
+        // Jeśli nie dzisiaj, ale w tym tygodniu (0 tygodni) - wyświetla TYLKO ten tekst
+        message += `<p class="font-bold mt-2">Masz urodziny w tym tygodniu!</p>`;
     } else {
+        // We wszystkich innych wypadkach wyświetla normalną liczbę tygodni
         message += `<p>Do najbliższych urodzin pozostało tygodni: <strong>${weeksLeft}</strong>.</p>`;
-        
-        if (weeksLeft === 0) {
-            message += `<p class="font-bold mt-2">Masz urodziny w tym tygodniu!</p>`;
-        }
     }
 
     dialogContent.innerHTML = message;
